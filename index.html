@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <style>
+        body {
+            display:grid;
+        }
+        input {
+            display:block;
+            margin: 10px 0 10px 0;
+        }
+        h1 {
+            color: teal;
+        }
+        .container {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>All countries dropdown list</h1>
+            <select id="countries" name="countries" onchange=getCapital(this)></select>
+                <script>
+                    getCountryList("countries");
+                </script>
+        <br/>
+        <br/>
+            <select id="states" name="states"></select>
+                <script>
+                    getStateList("states");
+                </script>
+        </div>
+        <br/>
+        <div class="card">
+            <label>Capital:</label>
+            <input type="text" id="capital" placeholder="Capital">
+        </div>
+        <br/>
+        <div class="card">
+            <label>Language:</label>
+            <input type="text" id="language" placeholder="Language">
+        </div>
+    </div>
+</body>
+</html>
